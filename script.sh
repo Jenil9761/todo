@@ -3,7 +3,7 @@
 pwd
 mkdir todo
 pwd
-sudo rsync -av --exclude='todo' * /todo
+sudo rsync -av --exclude='todo' * /home/ubuntu/todo
 pwd
 sudo cp -r /home/ubuntu/todo /var/www/todo/
 pwd

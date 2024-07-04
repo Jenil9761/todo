@@ -1,6 +1,6 @@
 #!bin/bash
 mkdir todo
-cp . /todo
+cp * /todo
 cp todo /var/www/todo
 cd /var/www/todo/
 npm i

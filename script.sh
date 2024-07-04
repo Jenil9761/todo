@@ -9,6 +9,6 @@ timeout 60s sudo cp -r /home/ubuntu/todo /var/www/todo/
 pwd
 cd /var/www/todo/
 pwd
-timeout 100s npm install
-timeout 100s npm install pm2 -g
-pm2 start
+timeout 100s sudo npm install
+timeout 100s sudo npm install pm2 -g
+sudo pm2 start

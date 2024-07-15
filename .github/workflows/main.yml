@@ -30,6 +30,5 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{ steps.meta.outputs.tags }}
-            jenil9761/demogitaction:demo1
+            jenil9761/demogitaction:demo2
           labels: ${{ steps.meta.outputs.labels }}

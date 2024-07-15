@@ -19,7 +19,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       
       - name: Extract metadata (tags, labels) for Docker
-        id: meta
+        id: meta.01
         uses: docker/metadata-action@v5.5.1
         with:
           images: jenil9761/demogitaction

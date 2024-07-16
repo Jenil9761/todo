@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'my-app',
       script: './app.js',
-      env: { },
+      env: { ${sercet.DOCKER_PORT} },
 
     },
   ],

@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'my-app',
       script: './app.js',
-      env: { ${sercet.DOCKER_PORT} },
+      env: { ${{ secrets.DOCKER_PASSWORD }} },
 
     },
   ],

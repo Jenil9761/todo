@@ -39,7 +39,7 @@ jobs:
             #  jenil9761/demogitaction:${{ env.TAG_DATE }}    #only for date
             # ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-      # - name: Deploy and run Docker container
-      #   run: |
-      #     docker run -d -p 3000:3000 --name my-app -e PORT=3000 jenil9761/demogitaction:demo2
+      - name: Deploy and run Docker container
+        run: |
+          docker run -d -p ${{ secrets.DOCKER_PORT }} jenil9761/demogitaction:demo2
 

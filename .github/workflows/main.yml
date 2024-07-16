@@ -12,14 +12,14 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v4
 
-      - name: Set DOCKER_PORT
-        id: set-docker-port
-        run: |
-          if [ -z "${{ secrets.DOCKER_PORT }}" ]; then
-            echo "DOCKER_PORT=8000" >> $GITHUB_ENV
-          else
-            echo "DOCKER_PORT=${{ secrets.DOCKER_PORT }}" >> $GITHUB_ENV
-          fi
+      # - name: Set DOCKER_PORT
+      #   id: set-docker-port
+      #   run: |
+      #     if [ -z "${{ secrets.DOCKER_PORT }}" ]; then
+      #       echo "DOCKER_PORT=8000" >> $GITHUB_ENV
+      #     else
+      #       echo "DOCKER_PORT=${{ secrets.DOCKER_PORT }}" >> $GITHUB_ENV
+      #     fi
 
       # - name: Update ecosystem.config.js with DOCKER_PORT
       #   run: |

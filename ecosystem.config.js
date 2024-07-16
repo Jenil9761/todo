@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'my-app',
       script: './app.js',
-      exec_mode: 'cluster', 
+ //     exec_mode: 'cluster', 
     },
   ],
 };

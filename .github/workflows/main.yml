@@ -17,6 +17,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+          port: ${{ secrets.DOCKER_PORT }}
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
@@ -32,7 +33,3 @@ jobs:
           tags: |
              jenil9761/demogitaction:demo2
           labels: ${{ steps.meta.outputs.labels }}
-
-      - name: Deploy and run Docker container
-        run: |
-          docker run -d -p ${{ secrets.DOCKER_PORT }}:80 jenil9761/demogitaction:demo2

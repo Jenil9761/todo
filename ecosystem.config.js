@@ -3,7 +3,7 @@ module.exports = {
     {
       name: 'my-app',
       script: './app.js',
-      env: { ${{ secrets.DOCKER_PASSWORD }} },
+      env: { ${ secrets.DOCKER_PASSWORD } },
 
     },
   ],

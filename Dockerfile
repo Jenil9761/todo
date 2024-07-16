@@ -1,19 +1,14 @@
-FROM node:latest AS build
+FROM node:14
 
-WORKDIR /code
+WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm install -g pm2 && npm install
 
 COPY . .
 
-FROM node:alpine AS production
+Expose the port the app runs on
+EXPOSE 3000
 
-WORKDIR /code
-
-COPY --from=build /code .
-
-EXPOSE 8000
-
-CMD ["node", "app.js"]
+CMD ["pm2-runtime", "start", "ecosystem.config.js"]

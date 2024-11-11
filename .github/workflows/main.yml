@@ -65,7 +65,7 @@ jobs:
         git config --global url."https://${{ secrets.REPO_TOKEN }}:x-oauth-basic@github.com/Jenil9761/todo.git".insteadOf "https://github.com/Jenil9761/todo.git"
         
         # SSH and pull changes
-        ssh -o StrictHostKeyChecking=no -i id_rsa ubuntu@34.41.45.11 << 'EOF'
+        ssh -o StrictHostKeyChecking=no -i id_rsa jenill9761@34.173.2.213 << 'EOF'
           cd /var/www/hello/
           git pull origin master
         EOF 

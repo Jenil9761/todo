@@ -42,7 +42,7 @@ name: Update Server
 on:
   push:
     branches:
-      - main  # Change this to your default branch
+      - master  # Change this to your default branch
 
 jobs:
   update-server:
@@ -50,7 +50,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: SSH to server and pull latest changes
       env:
@@ -62,7 +62,7 @@ jobs:
         chmod 600 id_rsa
         
         # Configure Git to use the access token for authentication
-        git config --global url."https://${{ secrets.REPO_TOKEN }}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
+        git config --global url."https://${{ secrets.REPO_TOKEN }}:x-oauth-basic@github.com/Jenil9761/todo.git".insteadOf "https://github.com/Jenil9761/todo.git"
         
         # SSH and pull changes
         ssh -o StrictHostKeyChecking=no -i id_rsa ubuntu@34.41.45.11 << 'EOF'

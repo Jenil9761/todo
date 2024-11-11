@@ -68,7 +68,7 @@ jobs:
         ssh -o StrictHostKeyChecking=no -i id_rsa jenill9761@34.173.2.213 << 'EOF'
           cd /var/www/hello/
           git pull origin master
-        EOF 
+        EOF
 
     - name: Clean up
       run: rm -f id_rsa

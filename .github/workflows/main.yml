@@ -59,7 +59,7 @@ jobs:
       run: |
         # Save the SSH key
         echo "$SSH_PRIVATE_KEY" > id_rsa
-        chmod 600 id_rsa
+        chmod 400 id_rsa
         
         # Configure Git to use the access token for authentication
         git config --global url."https://${{ secrets.REPO_TOKEN }}:x-oauth-basic@github.com/Jenil9761/todo.git".insteadOf "https://github.com/Jenil9761/todo.git"
